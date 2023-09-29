@@ -1,0 +1,21 @@
+---
+import { getBlogPosts } from "../../content/getBlogPosts";
+import BlogPost from "../../layouts/BlogPost.astro";
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts();
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: {
+      ...post,
+      date: new Date(post.date),
+    },
+  }));
+}
+
+const post = Astro.props;
+---
+
+<BlogPost {...post}>
+  <div set:html={post.body} />
+</BlogPost>
