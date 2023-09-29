@@ -12,6 +12,8 @@ Features:
 - ✅ Sitemap support
 - ✅ RSS Feed support
 
+Live demo: [includecore-astro-blog-example.vercel.app](https://includecore-astro-blog-example.vercel.app/)
+
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
